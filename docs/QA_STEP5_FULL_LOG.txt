@@ -1,0 +1,328 @@
+PASS risk feature class
+PASS incident feature class
+PASS vision AI feature class
+PASS host adapter
+PASS main no risk builder
+PASS main no incident builder
+PASS main no vision builder
+PASS risk factory
+PASS incident factory
+PASS vision factory
+PASS glossary explicit registration
+PASS backup explicit registration
+PASS AI image callback
+PASS AI image callback cleanup
+TOTAL PASS
+PASS Java string syntax BackupManager.java
+PASS Java string syntax BootReceiver.java
+PASS Java string syntax BuiltInBooks.java
+PASS Java string syntax ExportPrintManager.java
+PASS Java string syntax HostFeatureAdapter.java
+PASS Java string syntax HseHazardKnowledge.java
+PASS Java string syntax HseVisionAi.java
+PASS Java string syntax IncidentFeature.java
+PASS Java string syntax LibraryDb.java
+PASS Java string syntax MainActivity.java
+PASS Java string syntax PdfImporter.java
+PASS Java string syntax PersianNormalizer.java
+PASS Java string syntax ReminderReceiver.java
+PASS Java string syntax ReminderScheduler.java
+PASS Java string syntax RiskFeature.java
+PASS Java string syntax VisionAiFeature.java
+PASS Java string syntax HseFeature.java
+PASS Java string syntax HseFeatureCoordinator.java
+PASS Java string syntax HseSectionNavigator.java
+PASS Java string syntax HseUiTheme.java
+PASS LiteRT-LM version pinned 0.19.1
+
+SOURCE SYNTAX QA: PASS
+PASS: architecture step 3 feature coordinator
+FAIL: eight features
+PASS required settings.gradle
+PASS required build.gradle
+PASS required gradle.properties
+PASS required gradle/wrapper/gradle-wrapper.properties
+PASS required app/build.gradle
+PASS required app/src/main/AndroidManifest.xml
+PASS versionCode 57
+PASS versionName 4.6.2
+PASS manifest POST_NOTIFICATIONS
+PASS manifest SCHEDULE_EXACT_ALARM
+PASS manifest RECEIVE_BOOT_COMPLETED
+PASS manifest android:exported="true"
+PASS manifest android:allowBackup="false"
+PASS balance LibraryDb.java
+PASS balance IncidentFeature.java
+PASS balance HseHazardKnowledge.java
+PASS balance MainActivity.java
+PASS balance PersianNormalizer.java
+PASS balance ExportPrintManager.java
+PASS balance RiskFeature.java
+PASS balance BootReceiver.java
+PASS balance HostFeatureAdapter.java
+PASS balance ReminderScheduler.java
+PASS balance BackupManager.java
+PASS balance PdfImporter.java
+PASS balance HseVisionAi.java
+PASS balance ReminderReceiver.java
+PASS balance VisionAiFeature.java
+PASS balance BuiltInBooks.java
+PASS balance HseSectionNavigator.java
+PASS balance HseUiTheme.java
+PASS balance HseFeatureCoordinator.java
+PASS balance HseFeature.java
+PASS sqlite PRAGMA LibraryDb.java
+PASS sqlite PRAGMA IncidentFeature.java
+PASS sqlite PRAGMA HseHazardKnowledge.java
+PASS sqlite PRAGMA MainActivity.java
+PASS sqlite PRAGMA PersianNormalizer.java
+PASS sqlite PRAGMA ExportPrintManager.java
+PASS sqlite PRAGMA RiskFeature.java
+PASS sqlite PRAGMA BootReceiver.java
+PASS sqlite PRAGMA HostFeatureAdapter.java
+PASS sqlite PRAGMA ReminderScheduler.java
+PASS sqlite PRAGMA BackupManager.java
+PASS sqlite PRAGMA PdfImporter.java
+PASS sqlite PRAGMA HseVisionAi.java
+PASS sqlite PRAGMA ReminderReceiver.java
+PASS sqlite PRAGMA VisionAiFeature.java
+PASS sqlite PRAGMA BuiltInBooks.java
+PASS sqlite PRAGMA HseSectionNavigator.java
+PASS sqlite PRAGMA HseUiTheme.java
+PASS sqlite PRAGMA HseFeatureCoordinator.java
+PASS sqlite PRAGMA HseFeature.java
+PASS sqlite reported-error regression
+PASS class BackupManager.java
+PASS class LibraryDb.java
+PASS class PdfImporter.java
+PASS class ReminderScheduler.java
+PASS class ReminderReceiver.java
+PASS class BootReceiver.java
+PASS class MainActivity.java
+PASS class PersianNormalizer.java
+PASS backup MAX_BACKUP_BYTES
+PASS backup MAX_ENTRY_BYTES
+PASS backup MAX_ENTRIES
+PASS backup getCanonicalFile
+PASS backup validateDatabase
+PASS backup PRAGMA user_version
+PASS backup requireColumns
+PASS backup title_normalized
+PASS backup category_normalized
+PASS backup Symlink
+PASS scheduler canScheduleExactAlarms
+PASS scheduler setExactAndAllowWhileIdle
+PASS scheduler openExactAlarmSettings
+PASS scheduler hasNotificationPermission
+PASS receiver getReminder
+PASS receiver areNotificationsEnabled
+PASS receiver setReminderDone
+PASS boot goAsync
+PASS boot pending.finish
+PASS search escapeLike
+PASS search ESCAPE
+PASS search LIMIT 120
+PASS search foreign_key_check
+PASS search title_normalized
+PASS search category_normalized
+PASS search backfillNormalizedDocumentText
+PASS single build workflow
+PASS workflow gradle-version: '8.7'
+PASS workflow assembleDebug
+PASS workflow upload-artifact
+PASS recommended books count 10
+PASS glossary abbreviations unique
+PASS UI contract changeFontScale
+PASS UI contract font_scale
+PASS UI contract LAYOUT_DIRECTION_RTL
+PASS UI contract addExportTools
+PASS UI contract buildRecommendedBooks
+PASS pdf text bound MAX_PAGE_TEXT_CHARS
+PASS pdf text bound MAX_TOTAL_TEXT_CHARS
+PASS pdf text bound حجم کل متن استخراج‌شده
+PASS input bound MAX_NOTE_CHARS
+PASS input bound split("\\s+")
+
+TOTAL PASS errors= 0
+PASS AI dependency com.google.ai.edge.litertlm:litertlm-android:0.19.1
+PASS AI manifest android.permission.INTERNET
+PASS AI manifest libOpenCL.so
+PASS AI manifest libvndksupport.so
+PASS AI source gemma-4-E2B-it.litertlm
+PASS AI source 2588147712L
+PASS AI source 181938105e0eefd105961417e8da75903eacda102c4fce9ce90f50b97139a63c
+PASS AI source 6e5c4f1e395deb959c494953478fa5cec4b8008f
+PASS AI source Content.ImageFile
+PASS AI source Backend.GPU()
+PASS AI source Backend.CPU()
+PASS AI source conversation.sendMessage(contents)
+PASS AI source engine.createConversation()
+PASS AI source HSE
+PASS AI source MODEL_OK
+PASS AI no-paid-api-contract
+PASS AI UI PICK_AI_IMAGE
+PASS AI UI prepareAiImage
+PASS AI UI visionAi
+PASS AI UI VisionAiFeature
+PASS AI UI offline/free disclosure
+PASS AI image input size bound
+PASS AI fresh conversation per image
+PASS AI model on-demand provisioning
+PASS AI integrity/download Range
+PASS AI integrity/download sha256(part)
+PASS AI integrity/download writeVerifiedMarker
+PASS AI integrity/download isVerifiedMarkerValid
+
+TOTAL PASS errors= 0
+PASS HSE prompt HseHazardKnowledge.inspectionRubric()
+PASS HSE prompt HseHazardKnowledge.outputContract()
+PASS HSE prompt فقط بر اساس شواهد قابل مشاهده
+PASS HSE prompt قابل تشخیص نیست
+PASS HSE rubric سقوط از ارتفاع
+PASS HSE rubric داربست
+PASS HSE rubric شیروانی
+PASS HSE rubric حفاظ ناقص
+PASS HSE rubric برق
+PASS HSE rubric تجهیزات حفاظت فردی
+PASS HSE rubric حریق و انفجار
+PASS HSE rubric Housekeeping
+PASS HSE rubric جابه‌جایی و تردد
+PASS HSE rubric حفاری
+PASS HSE rubric مواد و انبارش
+PASS HSE rubric محیط صنعتی سیمان
+PASS HSE output دسته HSE:
+PASS HSE output شاهد قابل مشاهده:
+PASS HSE output خطر و پیامد:
+PASS HSE output اقدام فوری:
+PASS HSE output اقدام اصلاحی پیشنهادی:
+PASS HSE output اولویت:
+PASS HSE output اطمینان:
+PASS HSE UI disclosure
+TOTAL PASS errors=0
+PASS legacy reminders gain delivery_state
+PASS legacy reminders gain last_delivery_error
+PASS legacy rows become pending
+PASS legacy delivery errors become empty
+PASS migrated fixture reports DB version 11
+PASS LibraryDb schema version is 11
+PASS migration repairs null/blank delivery state
+PASS migration repairs unknown delivery state
+PASS migration clears null delivery errors
+
+MIGRATION QA PASS errors= 0
+PASS reliable write contract: insertReliable
+PASS reliable write contract: isTransientLock
+PASS reliable write contract: beginTransaction
+PASS reliable write contract: setTransactionSuccessful
+PASS reliable write contract: endTransaction
+PASS note validation: MAX_NOTE_CHARS
+PASS note validation: عنوان یا متن یادداشت خالی است
+PASS note validation: متن یادداشت بیش از ۲۵۰٬۰۰۰ نویسه
+PASS UI save wiring: db.addNote
+PASS UI save wiring: db.addReminder
+PASS UI save wiring: db.addRisk
+PASS UI save wiring: db.addIncident
+PASS note button state restored on success/failure
+PASS note error surfaced without clearing input
+PASS reminder error surfaced without clearing input
+PASS risk error surfaced without clearing input
+PASS incident error surfaced without clearing input
+PERSISTENCE QA errors=0
+PASS integrity check before backup
+PASS foreign key check before restore
+PASS future DB versions rejected
+PASS legacy DBs accepted for normal migration
+PASS current DB delivery columns validated
+PASS zip path traversal rejected
+PASS canonical path collisions rejected
+PASS zip entry and total size limits
+PASS duplicate zip entries rejected
+PASS restore uses staged DB before commit
+PASS rollback preserves recovery copy if rollback fails
+PASS copy fallback is verified
+PASS legacy DB migration remains transactional
+PASS old reminder state repaired
+PASS failed restore never silently creates a fresh DB
+PASS app version label matches 4.6.2
+BACKUP RESTORE HARDENED QA PASS errors= 0
+CONCURRENCY HARDENING QA: PASS
+ - lifecycle-aware IO gate present
+ - lifecycle-aware UI gate present
+ - executor drains before DB close
+ - backup/restore operations serialized in-process
+ - durable DB copy fallbacks used for restore staging/install
+ - restore closes active DB before physical replacement
+PASS scheduler refuses invalid reminder ids
+PASS scheduler checks exact-alarm capability
+PASS scheduler uses idle-safe exact alarms
+PASS scheduler catches schedule security errors
+PASS cancel is best-effort
+PASS cancel catches OS rejection
+PASS delivery states are normalized
+PASS receiver checks notification permission
+PASS receiver checks notification setting
+PASS receiver leaves permission failures retryable
+PASS boot receiver uses goAsync
+PASS boot receiver reschedules pending reminders
+REMINDER HARDENING PASS errors= 0
+/usr/lib/python3.13/zipfile/__init__.py:1642: UserWarning: Duplicate name: 'hse.db'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+PASS valid path hse.db
+PASS valid path library/a.pdf
+PASS valid path library/sub/b.pdf
+PASS reject path ../evil
+PASS reject path library/../evil
+PASS reject path /absolute
+PASS reject path library\evil
+PASS reject path library/a/../../x
+PASS duplicate ZIP detected
+PASS schema contract
+PASS legacy schema version 10 fixture
+PASS LIKE wildcard escaping present
+PASS DB upgrade calls reminder state repair
+PASS legacy null reminder state becomes pending
+PASS legacy unknown reminder state becomes pending
+PASS reminder delivery index present
+PASS scheduler catches exact-alarm security errors
+PASS notification failure remains retryable
+PASS copy/print manager present
+PASS copy/print controls wired
+PASS HSE abbreviation glossary present
+PASS dashboard export present
+PASS no stale active version
+PASS PDF per-page text cap
+PASS PDF total text cap
+PASS note size cap
+
+ADVERSARIAL TOTAL PASS errors= 0
+PASS file settings.gradle
+PASS file build.gradle
+PASS file gradle.properties
+PASS file gradlew
+PASS file gradlew.bat
+PASS file app/build.gradle
+PASS file app/src/main/AndroidManifest.xml
+PASS file gradle/wrapper/gradle-wrapper.properties
+PASS AGP 8.6.1
+PASS Gradle 8.7
+PASS compileSdk 35
+PASS targetSdk 35
+PASS minSdk 26
+PASS Java 17
+PASS version 4.6.2
+PASS gradlew present
+PASS gradlew robust launcher
+PASS java executable available
+WARN Java runtime is not 17 in this local environment; GitHub Actions pins JDK 17.
+WARN gradle not installed in current environment
+PASS setup-java 17
+PASS SDK platform 35
+PASS build tools 35
+PASS lint before assemble
+PASS source QA
+PASS environment QA
+PASS artifact upload
+PASS permission-independent launcher
+PASS root verification before build
+PASS dependency resolution
+TOTAL PASS errors= 0

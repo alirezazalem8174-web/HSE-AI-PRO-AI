@@ -1,0 +1,25 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.ekbatan.hse'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.ekbatan.hse'
+        minSdk 26
+        targetSdk 35
+        versionCode 60
+        versionName '4.6.5'
+    }
+    java { toolchain { languageVersion = JavaLanguageVersion.of(17) } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'com.tom-roush:pdfbox-android:2.0.27.0'
+    implementation 'androidx.core:core:1.15.0'
+    // Free, on-device multimodal AI runtime. No paid API and no cloud inference.
+    implementation 'com.google.ai.edge.litertlm:litertlm-android:0.19.1'
+}

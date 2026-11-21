@@ -1,0 +1,27 @@
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+b=(ROOT/'app/src/main/java/com/ekbatan/hse/BackupManager.java').read_text()
+m=(ROOT/'app/src/main/java/com/ekbatan/hse/MainActivity.java').read_text()
+d=(ROOT/'app/src/main/java/com/ekbatan/hse/LibraryDb.java').read_text()
+errors=[]
+def check(name,cond):
+    print(('PASS ' if cond else 'FAIL ')+name)
+    if not cond: errors.append(name)
+check('integrity check before backup','PRAGMA integrity_check' in b)
+check('foreign key check before restore','PRAGMA foreign_key_check' in b)
+check('future DB versions rejected','if(ver>DB_VERSION) throw new IOException' in b)
+check('legacy DBs accepted for normal migration','Older local backups are intentionally accepted' in b)
+check('current DB delivery columns validated','delivery_state","last_delivery_error' in b)
+check('zip path traversal rejected','getCanonicalFile()' in b and 'مسیر ناامن در Backup' in b)
+check('canonical path collisions rejected','canonicalPaths' in b and 'مسیر تکراری در Backup' in b)
+check('zip entry and total size limits','MAX_ENTRY_BYTES' in b and 'MAX_BACKUP_BYTES' in b)
+check('duplicate zip entries rejected','seen.add(n)' in b)
+check('restore uses staged DB before commit','hse_restore_staged_' in b and 'validateDatabase(staged)' in b)
+check('rollback preserves recovery copy if rollback fails','Never delete the only remaining recovery copy' in b)
+check('copy fallback is verified','copyVerified' in b and 'fos.getFD().sync()' in b)
+check('legacy DB migration remains transactional','db.beginTransaction()' in d and 'db.setTransactionSuccessful()' in d)
+check('old reminder state repaired','ensureReminderDeliveryState(db)' in d)
+check('failed restore never silently creates a fresh DB','if(!ok)finish()' in m and 'LibraryDb candidate=new LibraryDb(this)' in m)
+check('app version label matches 4.6.5','نسخه ۴.۶.۵' in m or '4.6.5' in m)
+print('BACKUP RESTORE HARDENED QA', 'PASS' if not errors else 'FAIL', 'errors=',len(errors))
+raise SystemExit(1 if errors else 0)
