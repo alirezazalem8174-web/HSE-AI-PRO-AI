@@ -1,1 +1,33 @@
-plugins { id 'com.android.application' } android { namespace 'com.ekbatan.hse' compileSdk 35 defaultConfig { applicationId 'com.ekbatan.hse' minSdk 26 targetSdk 35 versionCode 60 versionName '4.6.5' } // LiteRT-LM 0.19.1 نیاز به JDK 21 دارد. java { toolchain { languageVersion = JavaLanguageVersion.of(21) } } compileOptions { sourceCompatibility JavaVersion.VERSION_21 targetCompatibility JavaVersion.VERSION_21 } } dependencies { implementation 'com.tom-roush:pdfbox-android:2.0.27.0' implementation 'androidx.core:core:1.15.0' // Local / on-device multimodal AI implementation 'com.google.ai.edge.litertlm:litertlm-android:0.19.1' }
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.ekbatan.hse'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.ekbatan.hse'
+        minSdk 26
+        targetSdk 35
+        versionCode 60
+        versionName '4.6.5'
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+}
+
+dependencies {
+    implementation 'com.tom-roush:pdfbox-android:2.0.27.0'
+    implementation 'androidx.core:core:1.15.0'
+    implementation 'com.google.ai.edge.litertlm:litertlm-android:0.19.1'
+}
