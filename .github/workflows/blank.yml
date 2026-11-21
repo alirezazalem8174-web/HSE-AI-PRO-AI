@@ -20,7 +20,10 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build APK
+      - name: Grant Gradle permission
+        run: chmod +x gradlew
+
+      - name: Build Debug APK
         run: ./gradlew assembleDebug
 
       - name: Upload APK
@@ -28,3 +31,4 @@ jobs:
         with:
           name: HSE-AI-PRO-APK
           path: "**/build/outputs/apk/**/*.apk"
+          if-no-files-found: error
